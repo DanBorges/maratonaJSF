@@ -4,7 +4,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
 
 <h:head>
 
@@ -12,13 +13,14 @@
 </h:head>
 
 <h:body>
+    <p:messages/>
     <h:form>
         <h2>Primeira página com registro flow scopped</h2>
         <h:panelGrid columns="2">
             <h:outputLabel value="nome"/>
-            <h:inputText value="#{testeFlow.nome}"/>
+            <h:inputText value="#{testeFlow.nome}" required="true" requiredMessage="Campo nome é obrigatório"/>
             <h:outputLabel value="sobrenome"/>
-            <h:inputText value="#{testeFlow.sobrenome}"/>
+            <h:inputText value="#{testeFlow.sobrenome}" required="true" requiredMessage="Campo sobrenome é obrigatório"/>
             <h:commandButton value="Next" action="registration2?faces-redirect=true"/>
         </h:panelGrid>
     </h:form>
