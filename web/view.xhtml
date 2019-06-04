@@ -14,6 +14,7 @@
     <h:form>
         <h:outputLabel value="#{testeApplication.listaCategoriasFilmes}"/><br/>
         <h:outputLabel value="#{testeView.personagemSelecionado}"/><br/>
+        DEPENDENT: <h:outputLabel value="#{testeView.dependent.personagemSelecionado}"/><br/>
         <h:commandButton value="escolher personagem" actionListener="#{testeView.selecionarPersonagem()}"/>
         <h:commandButton value="escolher personagem forward" actionListener="#{testeView.selecionarPersonagem()}"
         action="view2"/>
