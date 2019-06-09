@@ -27,4 +27,9 @@
         <filter-name>Filter</filter-name>
         <url-pattern>/restricted/*</url-pattern>
     </filter-mapping>
+    <context-param>
+        <param-name>images.location</param-name>
+        <param-value>C:/var/</param-value>
+    </context-param>
+
 </web-app>
