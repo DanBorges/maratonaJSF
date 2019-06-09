@@ -10,7 +10,7 @@
         <load-on-startup>1</load-on-startup>
     </servlet>
     <welcome-file-list>
-        <welcome-file>inicioflow.xhtml</welcome-file>
+        <welcome-file>login.xhtml</welcome-file>
     </welcome-file-list>
 <!--    <error-page>-->
 <!--        <location>/error.xhtml</location>-->
@@ -19,4 +19,12 @@
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>*.xhtml</url-pattern>
     </servlet-mapping>
+    <filter>
+        <filter-name>Filter</filter-name>
+        <filter-class>br.com.devdojo.maratonajsf.filter.Filter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>Filter</filter-name>
+        <url-pattern>/restricted/*</url-pattern>
+    </filter-mapping>
 </web-app>

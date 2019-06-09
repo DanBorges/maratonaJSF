@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+    <body>
+        <h:form>
+            <p:messages autoUpdate="true"/>
+            <h:panelGrid columns="1">
+                <h:outputText value="Nome"/>
+                <h:inputText value="#{loginBean.nome}" required="true" requiredMessage="Por favor, informe o nome"/>
+                <h:outputText value="Senha"/>
+                <h:inputSecret value="#{loginBean.senha}" required="true" requiredMessage="por favor, informe a senha"/>
+                <h:commandButton action="#{loginBean.logar}" value="Logar"/>
+            </h:panelGrid>
+
+
+        </h:form>
+    </body>
+</html>
